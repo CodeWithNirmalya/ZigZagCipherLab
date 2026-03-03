@@ -1,79 +1,83 @@
-🔐 ZigZagCipherLab
+# 🔐 Rail Fence Cipher — Streamlit App
 
-A Python-based implementation of the Rail Fence Cipher supporting both encryption and decryption using dynamic rail configuration.
+A production-grade cryptography tool featuring encrypt/decrypt, live fence visualization, and rail breakdown analytics — all in a dark glassmorphic UI.
 
-📌 Features
+---
 
-✅ Dynamic number of rails
+## ✨ Features
 
-✅ Encryption support
+| Feature | Description |
+|---|---|
+| 🔒 Encryption | Zigzag plaintext across N rails, read row-by-row |
+| 🔓 Decryption | Index-pattern reconstruction for exact reversal |
+| 📊 Fence Visualizer | Character-level zigzag grid rendered inline |
+| 🧩 Rail Breakdown | Per-rail character groups with color coding |
+| 📈 Stats Panel | Character count, cycle length, unique chars |
+| 🎨 Dark UI | Glassmorphism, animated mesh gradients, custom fonts |
 
-✅ Decryption support
+---
 
-✅ Clean OOP-based structure
+## 🚀 Quick Start
+```bash
+# 1. Clone / download the project
+git clone https://github.com/yourname/railfence-cipher
 
-✅ Input sanitization (removes spaces)
+# 2. Install dependencies
+pip install streamlit
 
-✅ Zigzag pattern simulation
+# 3. Launch the app
+streamlit run railfence_app.py
+```
 
-🧠 Algorithm Used
+Then open your browser at `http://localhost:8501`
 
-The project implements the classical Rail Fence Cipher, a transposition cipher that arranges plaintext in a zigzag pattern across multiple rails.
+---
 
-🚀 How It Works
+## 🧠 How Rail Fence Works
 
-User inputs:
+**Encryption — 3 rails, text = `WEAREDISCOVERED`**
+```
+Rail 1:  W · · · E · · · I · · · V · · ·
+Rail 2:  · E · R · D · S · O · E · E · D
+Rail 3:  · · A · · · C · · · R · · · · ·
+```
 
-Text
+Reading each rail left-to-right:
+```
+Rail 1 → WEIV
+Rail 2 → ERDSOEEED
+Rail 3 → ACR
+```
+Ciphertext: `WEIVERDSOEEDACR`
 
-Number of rails
+**Decryption** reverses this by reconstructing the zigzag index pattern and mapping ciphertext characters back into their original positions.
 
-Encryption:
+---
 
-Zigzag simulation
+## 📁 Project Structure
+```
+railfence-cipher/
+├── railfence_app.py     # Streamlit UI application
+├── railfence_core.py    # Standalone cipher class (importable)
+├── requirements.txt     # Python dependencies
+└── README.md            # This file
+```
 
-Row-wise concatenation
+---
 
-Decryption:
+## 📦 Requirements
+```
+streamlit>=1.32.0
+```
 
-Pattern reconstruction
+---
 
-Zigzag re-reading
+## 🔐 Security Note
 
-🖥️ Example
+Rail Fence is a **classical transposition cipher** with a key space equal only to the number of rails. It is not suitable for any real security use — it exists as a historical and educational cipher.
 
-Input:
+---
 
-HELLOWORLD
-Rails: 3
+## 📄 License
 
-Encrypted Output:
-
-HOLELWRDLO
-
-Decrypted Output:
-
-HELLOWORLD
-🛠️ Technologies Used
-
-Python 3
-
-OOP Concepts
-
-Algorithmic Pattern Simulation
-
-📈 Future Improvements
-
-GUI Version (Tkinter)
-
-File-based encryption
-
-Web version using Flask
-
-Add more classical ciphers
-
-👨‍💻 Author
-
-Nirmalya Raja
-AI & ML Enthusiast
-GitHub: CodeWithNirmalya
+MIT — free to use, modify, and distribute.
