@@ -57,8 +57,8 @@ Ciphertext: `WEIVERDSOEEDACR`
 ## 📁 Project Structure
 ```
 railfence-cipher/
-├── railfence_app.py     # Streamlit UI application
-├── railfence_core.py    # Standalone cipher class (importable)
+├── railfence_ui.py     # Streamlit UI application
+├── cipher_text_convert.py    # Standalone cipher class (importable)
 ├── requirements.txt     # Python dependencies
 └── README.md            # This file
 ```
