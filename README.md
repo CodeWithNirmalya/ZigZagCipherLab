@@ -81,3 +81,7 @@ Rail Fence is a **classical transposition cipher** with a key space equal only t
 ## 📄 License
 
 MIT — free to use, modify, and distribute.
+<br>
+
+**Designed & developed with ♥ by [Nirmalya Raja](https://github.com/nirmalyaraja)**
+
