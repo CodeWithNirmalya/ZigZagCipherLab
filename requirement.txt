@@ -1,0 +1,25 @@
+# Cipher Text Conversion Requirements
+# This file documents the requirements for a cipher text conversion system
+
+# Dependencies
+cryptography==41.0.0
+pycryptodome==3.18.0
+
+# Development dependencies
+pytest==7.4.0
+black==23.7.0
+
+
+# Requirements File Documentation
+
+This file specifies the Python project dependencies and their versions.
+
+## Dependencies
+
+- **pylint** (version 2.17.5): A static code analysis tool for Python that checks for errors, enforces coding standards, and refactors code. It helps identify potential bugs, style issues, and code quality problems.
+
+## Usage
+
+Install all dependencies listed in this file using pip:
+
+pylint==2.17.5
